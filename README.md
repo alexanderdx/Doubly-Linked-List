@@ -1,5 +1,5 @@
-# Doubly-Linked-List
-Implementare tema OOP
+# Tema 1 POO
+144 - Dumea Alexandru Gabriel
 
 ## Cerinte
 Se considera 
@@ -12,7 +12,7 @@ Class Nod {
 * constructori de inițializare și parametrizati pentru clasa Nod;
 * destructor pentru clasa Nod;
 
-### Clasa ```ListaDubluInlantuita``` are:
+#### Clasa ```ListaDubluInlantuita``` are:
 * doi membri privati „Nod*” reprezentând primul și ultimul element;
 * metoda publica de adaugare a unui element pe o poziție;
 * supraincarcare a operatorului >>, realizata prin utilizarea succesiva a metodei decarata anterior;
