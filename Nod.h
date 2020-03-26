@@ -21,7 +21,5 @@ public:
 	void setData(int data);
 	void setNext(Nod* n);
 	void setPrev(Nod* n);
-
-	void printData() { std::cout << info << std::endl; }
 };
 

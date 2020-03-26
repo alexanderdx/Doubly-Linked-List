@@ -26,7 +26,5 @@ public:
 	ListaDubluInlantuita operator+(const ListaDubluInlantuita& list);
 	friend std::istream& operator>>(std::istream& in, ListaDubluInlantuita& list);
 	friend std::ostream& operator<<(std::ostream& out, const ListaDubluInlantuita& list);
-
-	Nod* get_head() { return head; }
 };
 
