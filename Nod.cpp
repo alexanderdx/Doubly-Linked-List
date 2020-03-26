@@ -14,6 +14,13 @@ Nod::Nod(int data)
 	next = nullptr;
 }
 
+Nod::Nod(const Nod& src)
+{
+	this->info = src.info;
+	this->prev = new Nod(src.prev->info);
+	this->next = new Nod(src.next->info);
+}
+
 Nod::Nod(int data, Nod* prev, Nod* next)
 {
 	this->info = data;
@@ -23,7 +30,8 @@ Nod::Nod(int data, Nod* prev, Nod* next)
 
 Nod::~Nod()
 {
-
+	this->prev = nullptr;
+	this->next = nullptr;
 }
 
 int Nod::getData() const

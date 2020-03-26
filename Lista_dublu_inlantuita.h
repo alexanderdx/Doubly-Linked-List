@@ -8,6 +8,8 @@ private:
 	Nod* tail;
 	int size;
 
+	bool reverse = false;
+
 public:
 	ListaDubluInlantuita();
 	ListaDubluInlantuita(const ListaDubluInlantuita& list);
@@ -22,6 +24,8 @@ public:
 	void remove_at(int);
 
 	int lenght() const;
+	void printReverse(bool val);
+
 
 	ListaDubluInlantuita operator+(const ListaDubluInlantuita& list);
 	friend std::istream& operator>>(std::istream& in, ListaDubluInlantuita& list);

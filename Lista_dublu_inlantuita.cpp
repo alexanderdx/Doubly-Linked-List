@@ -86,7 +86,7 @@ Nod* ListaDubluInlantuita::get_node(int index)
 
 void ListaDubluInlantuita::insert_at(int index, int value)
 {
-	Nod* pos = get_node(index); // inseram 'node' dupa nodul de la indexul dat
+	Nod* pos = get_node(index);
 
 	if (pos == head)
 		insert_front(value);
@@ -134,6 +134,11 @@ int ListaDubluInlantuita::lenght() const
 	return this->size;
 }
 
+void ListaDubluInlantuita::printReverse(bool val)
+{
+	this->reverse = val;
+}
+
 ListaDubluInlantuita ListaDubluInlantuita::operator+(const ListaDubluInlantuita& list)
 {
 	ListaDubluInlantuita temp = *this;
@@ -155,7 +160,7 @@ std::istream& operator>>(std::istream& in, ListaDubluInlantuita& list)
 	in >> value;
 	while (value != 0)
 	{
-		list.insert_front(value);
+		list.insert_back(value);
 		in >> value;
 	}
 
@@ -167,11 +172,21 @@ std::ostream& operator<<(std::ostream& out, const ListaDubluInlantuita& list)
 	if (list.size == 0)
 		out << "Lista vida!\n";
 	else {
-		Nod* iter = list.head;
-		while (iter)
-		{
-			out << iter->getData() << ' ';
-			iter = iter->getNext();
+		if (!list.reverse) {
+			Nod* iter = list.head;
+			while (iter)
+			{
+				out << iter->getData() << ' ';
+				iter = iter->getNext();
+			}
+		}
+		else {
+			Nod* iter = list.tail;
+			while (iter)
+			{
+				out << iter->getData() << ' ';
+				iter = iter->getPrev();
+			}
 		}
 	}
 

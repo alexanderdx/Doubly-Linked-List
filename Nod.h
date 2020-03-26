@@ -11,6 +11,7 @@ private:
 public:
 	Nod();
 	Nod(int data);
+	Nod(const Nod&);
 	Nod(int data, Nod* prev, Nod* next);
 	~Nod();
 
